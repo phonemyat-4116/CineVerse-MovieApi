@@ -1,0 +1,330 @@
+/*-----------------------------------*\
+ * #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+ * #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colors
+     */
+    --java: #21B0B8;
+    --Monte-Carlo: #7CCBB9;
+    --Jagged-Ice: #BBE5DD;
+    --Fountain-Blue: #4FC4BB;
+    --dark-gray: #545454;
+
+    /**
+     * gradient
+     */
+    --theme-gradient: linear-gradient(80deg, rgba(187,229,221,1) 0%, rgba(33,176,184,1) 31%, rgba(124,203,185,1) 100%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--theme-gradient);
+    background-repeat: no-repeat;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3e3e3e;
+    padding: 0 30px;
+}
+
+nav h1{
+    font-size: 30px;
+}
+
+nav h1 span{
+    color: var(--Monte-Carlo);
+}
+
+nav button{
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: var(--java);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover{
+    background-color: var(--Fountain-Blue);
+}
+
+.container{
+    max-width: 50rem;
+    /* background: red; */
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.container h1{
+    color: var(--Jagged-Ice);
+    margin: 1rem 0;
+}
+
+.search-container{
+    width: 50%;
+    background-color: var(--dark-gray);
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    /* margin: auto; */
+}
+
+.search-container input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 1px solid #BBE5DD;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.search-container button{
+    width: 7rem;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--java);
+    transition: all 0.5s;
+    margin: 0 10px;
+}
+
+.search-container button:hover{
+    background: var(--Monte-Carlo);
+}
+
+.search-list{
+    width: 300px;
+    max-height: 300px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow-y: scroll;
+    background-color: var(--dark-gray);
+    margin-top: 2px;
+    padding-top: 10px;
+}
+
+.search-list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.search-list-item:hover{
+    background: #666666;
+    cursor: pointer;
+}
+
+.search-list-item img{
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.search-list-title{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-list-info{
+    width: 230px;
+}
+
+.search-list-info .search-list-sub-info .search-list-release{
+    margin-right: 10px;
+}
+
+.hide-search-list{
+    display: none;
+}
+
+
+/* movie detail container  */
+.movie-detail-container{
+   margin-top: 3rem;
+   display: flex;
+   align-items: center;
+}
+
+.detail-movie-info .movie-title{
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.detail-movie-info .movie-releaseTimeRating{
+    width: 300px;
+    /* background-color: red; */
+    font-size: smaller;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.detail-movie-info .movie-releaseTimeRating .rating{
+    background-color: #f3ce13;
+    padding: 5px;
+    font-weight: bolder;
+    color: #545454;
+    border-radius: 5px;
+}
+
+.detail-movie-info .movie-releaseTimeRating .hd{
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.detail-movie-info .genre{
+    display: inline-block;
+    background-color: var(--Jagged-Ice);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size:smaller;
+    color: var(--dark-gray);
+}
+
+.detail-movie-info .detail-description{
+    font-size: smaller;
+}
+
+.detail-movie-info .detail-description span{
+    font-weight: bold;
+}
+
+.detail-movie-info .detail-description p{
+    margin: 10px 0;
+}
+
+.detail-movie-info .detail-description .lang{
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.detail-movie-info .plot{
+    margin: 2rem 0;
+}
+
+.detail-movie-info .plot small{
+    background-color: var(--dark-gray);
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.detail-movie-info .plot p{
+    margin-top: 1rem;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.detail-movie-img img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin-right: 3rem;
+}
+
+
+/* scroll bar thumbnail */
+.search-list::-webkit-scrollbar{
+    width: 8px;
+}
+
+.search-list::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-right: 2px;
+}
+
+.search-list::-webkit-scrollbar-thumb{
+    background-color: var(--Monte-Carlo);
+    outline: none;
+    border-radius: 10px;
+}
+
+
+
+/* media screen  */
+@media screen and (max-width: 600px) {
+    .container h1{
+        text-align: center;
+    }
+
+    .search-container{
+        width: 350px;
+        margin: auto;
+    }
+
+    .search-container h3{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .movie-detail-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .movie-detail-container .detail-movie-img img{
+        margin-right: 0;
+    }
+
+    .movie-detail-container .poster-img{
+        width: 250px;
+        height: 300px;
+    }
+
+    .detail-movie-info{
+        width: 400px;
+        text-align: center;
+    }
+
+    .detail-movie-info .movie-releaseTimeRating{
+        margin: auto;
+    }
+
+    .detail-movie-info .genre{
+        margin-top: 10px;
+    }
+
+    .detail-movie-info .plot{
+        margin: 1rem 0;
+    }
+
+}
+
+
